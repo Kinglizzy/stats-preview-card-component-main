@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+}
+
+:root {
+    --clr-m-bg: hsl(233, 47%, 7%);
+    --clr-card-bg: hsl(244, 38%, 16%);
+    --clr-accent: rgb(170, 92, 219);
+    --clr-m-head-stats: hsl(0, 0%, 100%);
+    --clr-m-para: hsla(0, 0%, 100%, 0.75);
+    --clr-stat-head: hsla(0, 0%, 100%, 0.6);
+    --fnt-size:  0.9375rem;
+    --fntf-h2h3: "Inter";
+    --fntf-p:"Lexend Deca";
+
+}
+
+/* ===
+    || general styles  + typography
+       === */
+body {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--clr-m-bg);
+
+    font-size: var(--fnt-size);
+}
+
+.main-text > h1 {
+    font-family: var(--fntf-h2h3);
+    font-weight: 700;
+    color: var(--clr-m-head-stats);
+}
+
+.insights {
+    color: var(--clr-accent);
+}
+
+.main-text > p {
+    color: var(--clr-m-para);
+    font-family: var(--fntf-p);
+    font-weight: 400;
+    padding: 1em 0;
+}
+
+.subtext-item > p {
+    font-family: var(--fntf-h2h3);
+    font-weight: 700;
+    color: var(--clr-m-head-stats);
+}
+
+.subtext-item > h3 {
+    font-family: var(--fntf-p);
+    color: var(--clr-m-para);
+    font-size: var(--fnt-size);
+}
+
+/* ===
+    || layout
+            === */
+.card {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-card-bg);
+
+    border-radius: 0.5em;
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .card {
+        width: 100%;
+        height: auto;
+        width: 60vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-auto-rows: auto;
+    }
+
+    .image-container {
+       grid-column: 1 / 2;
+    }
+
+    .main-content {
+        grid-column: 2 / 3;
+        padding: 1.5rem;
+    }
+
+    .subtext {
+        display: flex;
+        
+    }
+  }
+
+/* image */
+.image-container {
+    background: rgb(73, 3, 73);
+    
+    
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-text {
+    padding: 1.5em 1.5em 0;
+}
+
+
+.subtext > * {
+    margin: 1em;
+}
+
+.attribution {
+    color: var(--clr-m-para)
+}
+
+/* .subtext-item > * {
+    display: flex;
+    justify-content: center;
+    
+} */

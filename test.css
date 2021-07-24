@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --clr-accent: hsl(277, 64%, 61%);
+    --fnt-p-h1: "Inter";
+   
+
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fnt-ginter400700), Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: max(200px, 90%);
+   height: 100%;
+
+    display: grid;
+    grid-template-columns: 
+        300px
+        10em
+        1fr
+        2fr;
+    grid-auto-rows: 12em;
+}
+
+.container * {
+    background: brown;
+}
+
+.image {
+    background-size: cover;
+    background-position: bottom right;
+    background-image: url(/images/image-header-desktop.jpg);
+    background-blend-mode: multiply;
+
+    grid-column: 1 / 3;
+    grid-row: 1;
+    
+}
+
+.item-1 {
+    grid-column: -1 / 3;
+   
+}
+
+.item-4 {
+    grid-column: 1 / 5;
+    background: rgba(0, 0, 0, 0.4);
+    grid-row: 1;
+    
+}
+
